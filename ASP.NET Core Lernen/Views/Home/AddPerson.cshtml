@@ -1,0 +1,28 @@
+﻿@model PersonViewModel
+@{
+    ViewData["Title"] = "Add Person";
+}
+
+@*@using (Html.BeginForm("AddPerson", "Home", FormMethod.Post, new { @class = "row g-3" }))
+{*@
+<form method="post" asp-action="AddPerson" asp-controller="Home" class="row g-3">
+
+
+    <div class="col-md-6">
+        <label for="forname" class="form-label">Forname</label>
+        <input type="text" class="form-control" id="forname" asp-for="Forname">
+    </div>
+    <div class="col-md-6">
+        <label for="lastname" class="form-label">Lastname</label>
+        <input type="text" class="form-control" id="lastname" asp-for="Lastname">
+    </div>
+    <div class="col-12">
+        <label for="birthday" class="form-label">Birthday</label>
+        <input type="date" class="form-control" id="birthday" asp-for="Birthday">
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>
+@*}*@
+

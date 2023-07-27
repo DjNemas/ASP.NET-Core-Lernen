@@ -1,0 +1,41 @@
+﻿@model List<ListPersoneViewModel>
+@{
+    ViewData["Title"] = "List Persons";
+}
+
+@if(Model.Count() == 0)
+{
+    <p>No Persons Found</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Forname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Birthday</th>
+                <th scope="col">Friends</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var person in Model)
+            {
+                <tr>
+                    <th scope="row">@person.Id</th>
+                    <td>@person.Forname</td>
+                    <td>@person.Lastname</td>
+                    <td>@person.Birthday.ToString("dd.MM.yyyy")</td>
+                    <td>
+                        <a class="btn btn-danger" href="~/Home/DeletePerson/@person.Id">
+                           Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
